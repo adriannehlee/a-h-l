@@ -53,12 +53,12 @@ class Bio extends Component {
           <BioText>
             <p style={{ marginTop: '0px' }}>
               Hello, welcome to my simple-dimple website. I’m a user experience
-              designer and researcher in Canada currently working to improving
+              designer and researcher in Canada currently working to improve
               the value of Government of Canada’s digital products.
             </p>
             <p>
-              Here are some key things that make me excited to do the work I do
-              - solving the right problems, developing candid and meaningful
+              Here are some key things that make me excited to do the work I do:
+              solving the right problems, developing candid and meaningful
               relationships with my coworkers, and learning every day.
             </p>
             <p>
