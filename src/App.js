@@ -16,8 +16,8 @@ const theme = createMuiTheme({
   palette: {
     primary: blue,
     fontFamily: 'PT Sans',
-    fontSize: '18px'
-  }
+    fontSize: '18px',
+  },
 });
 const BorderBox = styled.div`
   margin: auto;
@@ -29,9 +29,10 @@ const BorderBox = styled.div`
 const Container = styled.div`
   width: 100%;
   margin: auto;
+  padding: 20px;
   box-sizing: border-box;
   font-family: PT Sans;
-  max-width: 301px;
+  max-width: 401px;
   @media only screen and ${Breakpoints.mobile.minWidth} {
     max-width: 511px;
   }

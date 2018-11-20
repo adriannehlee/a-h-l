@@ -32,7 +32,7 @@ const Title = styled.p`
 const BioText = styled.div`
   font-size: 18px;
   width: 100%;
-  min-width: 429px;
+  /* min-width: 429px; */
 `;
 const ProfileImg = styled.img`
   width: 245px;
@@ -40,8 +40,8 @@ const ProfileImg = styled.img`
 `;
 const styles = {
   highlightLink: {
-    '&:hover': { backgroundColor: '#8fff00' }
-  }
+    '&:hover': { backgroundColor: '#8fff00' },
+  },
 };
 class Bio extends Component {
   render() {
@@ -53,8 +53,8 @@ class Bio extends Component {
           <BioText>
             <p style={{ marginTop: '0px' }}>
               Hello, welcome to my simple-dimple website. I’m a user experience
-              designer and researcher in Canada currently working to improve
-              the value of Government of Canada’s digital products.
+              designer and researcher in Canada currently working to improve the
+              value of Government of Canada’s digital products.
             </p>
             <p>
               Here are some key things that make me excited to do the work I do:
@@ -76,7 +76,7 @@ class Bio extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  color: 'black'
+                  color: 'black',
                 }}
                 className={classes.highlightLink}
               >
@@ -90,7 +90,12 @@ class Bio extends Component {
               matches ? ( // tablet & desktop only // mobile
                 <ImageGridContainer>
                   <div className="spacer" />
-                  <ProfileImg src={profileImg} alt="Adrianne H. Lee" />
+                  <ProfileImg
+                    src={
+                      'https://a-h-l.net/static/media/Adrianne2018.95b35eae.jpg'
+                    }
+                    alt="Adrianne H. Lee"
+                  />
                   <Connect />
                   <div className="spacer" />
                 </ImageGridContainer>
