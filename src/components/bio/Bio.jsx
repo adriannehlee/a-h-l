@@ -9,23 +9,38 @@ import { withStyles } from '@material-ui/core';
 
 const Container = styled.div`
   margin-bottom: 37px;
+  // mobile 
+  padding: 0 10px;
+  h1 {
+    font-size: 50px;
+  }
+  @media only screen and ${Breakpoints.mobile.minWidth} {
+    // tablet+
+    padding: 0;
+    h1{
+    font-size: 72px;
+    }
+  }
 `;
 const ImageGridContainer = styled.div`
   display: grid;
   grid-template-columns: 215px 245px;
   grid-template-rows: 246px 175px;
+  grid-gap: 18px;
   // grid-row-gap: 0px;
   // grid-column-gap: 24px;
 `;
 const BioGridContainer = styled.div`
   @media only screen and ${Breakpoints.desktop.minWidth} {
+    // desktop and larger
     max-width: none;
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     grid-gap: 48px;
   }
 `;
-const Title = styled.p`
+const Title = styled.h1`
+  font-weight: normal;
   font-size: 72px;
   margin-bottom: 28px;
 `;
@@ -35,7 +50,6 @@ const BioText = styled.div`
   /* min-width: 429px; */
 `;
 const ProfileImg = styled.img`
-  width: 245px;
   height: 256px;
 `;
 const styles = {
@@ -92,7 +106,7 @@ class Bio extends Component {
                   <div className="spacer" />
                   <ProfileImg
                     src={
-                      'https://a-h-l.net/static/media/Adrianne2018.95b35eae.jpg'
+                      profileImg
                     }
                     alt="Adrianne H. Lee"
                   />
