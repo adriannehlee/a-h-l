@@ -12,9 +12,9 @@ const Container = styled.div`
 `;
 const ImageGridContainer = styled.div`
   display: grid;
-  grid-template-columns: 230px 245px;
-  grid-template-rows: 1fr 1fr;
-  grid-row-gap: 18px;
+  grid-template-columns: 215px 245px;
+  grid-template-rows: 246px 175px;
+  // grid-row-gap: 0px;
   // grid-column-gap: 24px;
 `;
 const BioGridContainer = styled.div`
@@ -32,6 +32,7 @@ const Title = styled.p`
 const BioText = styled.div`
   font-size: 18px;
   width: 100%;
+  /* min-width: 429px; */
 `;
 const ProfileImg = styled.img`
   width: 245px;
@@ -39,8 +40,8 @@ const ProfileImg = styled.img`
 `;
 const styles = {
   highlightLink: {
-    '&:hover': { backgroundColor: '#8fff00' }
-  }
+    '&:hover': { backgroundColor: '#8fff00' },
+  },
 };
 class Bio extends Component {
   render() {
@@ -52,12 +53,12 @@ class Bio extends Component {
           <BioText>
             <p style={{ marginTop: '0px' }}>
               Hello, welcome to my simple-dimple website. I’m a user experience
-              designer and researcher in Canada currently working to improving
-              the value of Government of Canada’s digital products.
+              designer and researcher in Canada currently working to improve the
+              value of Government of Canada’s digital products.
             </p>
             <p>
-              Here are some key things that make me excited to do the work I do
-              - solving the right problems, developing candid and meaningful
+              Here are some key things that make me excited to do the work I do:
+              solving the right problems, developing candid and meaningful
               relationships with my coworkers, and learning every day.
             </p>
             <p>
@@ -75,7 +76,7 @@ class Bio extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  color: 'black'
+                  color: 'black',
                 }}
                 className={classes.highlightLink}
               >
@@ -89,7 +90,12 @@ class Bio extends Component {
               matches ? ( // tablet & desktop only // mobile
                 <ImageGridContainer>
                   <div className="spacer" />
-                  <ProfileImg src={profileImg} alt="Adrianne H. Lee" />
+                  <ProfileImg
+                    src={
+                      'https://a-h-l.net/static/media/Adrianne2018.95b35eae.jpg'
+                    }
+                    alt="Adrianne H. Lee"
+                  />
                   <Connect />
                   <div className="spacer" />
                 </ImageGridContainer>
